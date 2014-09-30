@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table id="add_entry">
+	<tr>
+		<td>
+			<input type="text" placeholder="Employee ID" />
+		</td>
+		<td>
+			<input type="text" placeholder="Employee Name" />
+		</td>
+		<td>
+			<input type="text" placeholder="Employee Age" />
+		</td>
+		<td>
+			<input type="text" placeholder="Monthly Salary" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<button id="save_employee">Add</button>
+		</td>
+	</tr>
+</table>	
+
+<table id="list_employees" width="50%" border="1">
+	<thead>
+	<tr>
+		<td>ID</td>
+		<td>Name</td>
+		<td>Age</td>
+		<td>Monthly Salary</td>
+		<td>&nbsp;</td>
+	</tr>
+	</thead>
+	<tbody>
+		<script type="text/template" id="info_template">
+			<tr>
+				<td><%= id %></td>
+				<td><%= name %></td>
+				<td><%= age %></td>
+				<td><%= salary %></td>
+				<td><button id="delete">Delete</button></td>
+			</tr>
+		</script>
+	</tbody>	
+</table>	
+
+
+
+
+<script src="../libs/jquery.js"></script>
+<script src="../libs/underscore.js"></script>
+<script src="../libs/backbone.js"></script>
+<script src="../libs/backboneLocalStorage.js"></script>
+
+</body>
+</html>
