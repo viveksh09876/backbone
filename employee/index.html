@@ -38,17 +38,17 @@
 		<td>&nbsp;</td>
 	</tr>
 	</thead>
-	<tbody id="info_template">
+	<tbody id="info_list">
 		
 	</tbody>	
 </table>	
 </section>
-<script type="text/template" >
+<script type="text/template" id="list_template">
 	<tr>
-		<td><%= id %></td>
-		<td><%= name %></td>
-		<td><%= age %></td>
-		<td><%= salary %></td>
+		<td><% id %></td>
+		<td><% name %></td>
+		<td><% age %></td>
+		<td><% salary %></td>
 		<td><button id="delete">Delete</button></td>
 	</tr>
 </script>
@@ -57,6 +57,10 @@
 <script src="../libs/underscore.js"></script>
 <script src="../libs/backbone.js"></script>
 <script src="../libs/backboneLocalStorage.js"></script>
+<script src="js/Model/emp_models.js"></script>
+<script src="js/Collection/emp_collections.js"></script>
+<script src="js/View/emp_views.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
