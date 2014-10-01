@@ -29,7 +29,7 @@
 </table>	
 
 <table id="list_employees" width="50%" border="1">
-	<thead>
+	
 	<tr>
 		<td>ID</td>
 		<td>Name</td>
@@ -37,11 +37,9 @@
 		<td>Monthly Salary</td>
 		<td>&nbsp;</td>
 	</tr>
-	</thead>
-	<tbody id="info_list">
-		
-	</tbody>	
+	
 </table>	
+
 </section>
 <script type="text/template" id="list_template">
 	<tr>
@@ -49,7 +47,7 @@
 		<td><%= name %></td>
 		<td><%= age %></td>
 		<td><%= salary %></td>
-		<td><button id="delete">Delete</button></td>
+		<td><button class="delete">Delete</button></td>
 	</tr>
 </script>
 

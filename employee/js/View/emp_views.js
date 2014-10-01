@@ -2,7 +2,7 @@ var app = app || {};
 
 (function(){
 app.AppView = Backbone.View.extend({
-	el: '#add_entry',
+	el: '#list_employees',
 	template: _.template($('#list_template').html()),
 	initialize: function() {		
 		
@@ -10,7 +10,7 @@ app.AppView = Backbone.View.extend({
 		this.$empname = this.$('#emp_name');
 		this.$empage = this.$('#emp_age');
 		this.$empsalary = this.$('#emp_salary');
-		this.$list = this.$('#info_list');
+		this.$list = this.$('#list_employees');
 		this.listenTo(app.Employees, 'add', this.addOne);
 	},
 		
