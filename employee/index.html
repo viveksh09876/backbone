@@ -5,20 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-
+<section id="emp_app">
 <table id="add_entry">
 	<tr>
 		<td>
-			<input type="text" placeholder="Employee ID" />
+			<input type="text" id="emp_id" placeholder="Employee ID" />
 		</td>
 		<td>
-			<input type="text" placeholder="Employee Name" />
+			<input type="text" id="emp_name" placeholder="Employee Name" />
 		</td>
 		<td>
-			<input type="text" placeholder="Employee Age" />
+			<input type="text" id="emp_age" placeholder="Employee Age" />
 		</td>
 		<td>
-			<input type="text" placeholder="Monthly Salary" />
+			<input type="text" id="emp_salary" placeholder="Monthly Salary" />
 		</td>
 	</tr>
 	<tr>
@@ -38,21 +38,20 @@
 		<td>&nbsp;</td>
 	</tr>
 	</thead>
-	<tbody>
-		<script type="text/template" id="info_template">
-			<tr>
-				<td><%= id %></td>
-				<td><%= name %></td>
-				<td><%= age %></td>
-				<td><%= salary %></td>
-				<td><button id="delete">Delete</button></td>
-			</tr>
-		</script>
+	<tbody id="info_template">
+		
 	</tbody>	
 </table>	
-
-
-
+</section>
+<script type="text/template" >
+	<tr>
+		<td><%= id %></td>
+		<td><%= name %></td>
+		<td><%= age %></td>
+		<td><%= salary %></td>
+		<td><button id="delete">Delete</button></td>
+	</tr>
+</script>
 
 <script src="../libs/jquery.js"></script>
 <script src="../libs/underscore.js"></script>

@@ -1,5 +1,6 @@
 var app = app || {};
 
+(function(){
 app.Emp = Backbone.Model.extend({
 	defaults:{
 		id: '',
@@ -9,3 +10,5 @@ app.Emp = Backbone.Model.extend({
 	}
 	
 });
+
+})();

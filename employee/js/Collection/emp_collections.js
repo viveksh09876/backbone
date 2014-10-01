@@ -1,5 +1,6 @@
 var app = app || {};
 
+(function(){
 var empList = Backbone.Collection.extend({
 	
 	model: app.Emp,
@@ -19,3 +20,4 @@ var empList = Backbone.Collection.extend({
 });
 
 app.Employees = new empList();
+})();
