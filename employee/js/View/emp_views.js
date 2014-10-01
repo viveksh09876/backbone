@@ -2,7 +2,7 @@ var app = app || {};
 
 (function(){
 app.AppView = Backbone.View.extend({
-	el: '#emp_app',
+	el: '#add_entry',
 	template: _.template($('#list_template').html()),
 	initialize: function() {		
 		
