@@ -4,7 +4,7 @@ var app = app || {};
 var empList = Backbone.Collection.extend({
 	
 	model: app.Emp,
-	localStorage: new Backbone.LocalStorage('employees-bacbone'),
+	localStorage: new Backbone.LocalStorage('employees-backbone'),
 	
 	nextOrder: function(){
 		if ( !this.length) {

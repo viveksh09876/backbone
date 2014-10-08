@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Contacts App</title>
+	</head>
+	<body>
+	
+	<nav>
+		<ul>
+			<li><a href="">List Contacts</a></li>
+			<li><a href="">Add Contact</a></li>
+		</ul>	
+	</nav>		
+		
+	<section id="dataView"></section>		
+	
+	
+	<script id="contactTemplate" type="text/template">
+	    <img src="<%= photo %>" alt="<%= name %>" />
+	    <h1><%= name %><span><%= type %></span></h1>
+	    <div><%= address %></div>
+	    <dl>
+	        <dt>Tel:</dt><dd><%= tel %></dd>
+	        <dt>Email:</dt><dd><a href="mailto:<%= email %>"><%= email %></a></dd>
+	    </dl>
+	</script>
+	
+	<script src="../libs/jquery.js"></script>
+	<script src="../libs/underscore.js"></script>
+	<script src="../libs/backbone.js"></script>
+	<script src="../libs/backboneLocalStorage.js"></script>	
+	<script src="js/Model/contacts.js"></script>	
+	<script src="js/Collection/directory.js"></script>
+	<script src="js/View/contactView.js"></script>
+	
+	
+	</body>	
+</html>
