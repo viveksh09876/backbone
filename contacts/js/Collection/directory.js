@@ -1,9 +1,9 @@
-(function(){
-
-	var app = app || {};
+(function(){	
 	
-	app.Directory = Backbone.Collection.extend({
-		model: app.Contact
+	Directory = Backbone.Collection.extend({
+		model: Contact
 	});
 	
-}(jQuery));
+	
+	
+})();

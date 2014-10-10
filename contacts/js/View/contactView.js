@@ -1,6 +1,4 @@
-(function($){
-	
-	var app = app || {};
+(function($){	
 	
 	var contacts = [
         { name: "Contact 1", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "family" },
@@ -13,7 +11,7 @@
         { name: "Contact 8", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "family" }
     ];
 	
-	app.ContactView = Backbone.View.extend({
+	 ContactView = Backbone.View.extend({
 		
 		tagName: "article",
     	className: "contact-container",
@@ -27,18 +25,17 @@
 		}		
 	});
 	
-	
-	app.DirectoryView = Backbone.View.extend({
+	 DirectoryView = Backbone.View.extend({
 		el: $('#dataView'),
 		
 		initialize: function() {
 			
-			this.collection = new app.Directory(contacts);
+			this.collection = new Directory(contacts);
 			this.render();
 		},
 		
 		render: function() {
-			var that = this.
+			var that = this;
 			_.each(this.collection.models, function(item){
 				
 				that.renderContact(item);
@@ -47,13 +44,13 @@
 		},
 		
 		renderContact: function(item) {
-			var contactView = app.ContactView({
+			var contactView = new ContactView({
 				model: item
 			});
-			this.$el.append(app.contactView.render().el);
+			this.$el.append(contactView.render().el);
 		}
 	});
 	
-	new app.DirectoryView();
+	new DirectoryView();
 	
 }(jQuery));
