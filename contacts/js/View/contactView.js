@@ -20,10 +20,30 @@
 		render: function() {
 			
 			var tmpl = _.template(this.template);
-			this.$el.html(tmpl(this.model.toJSON()));
+			this.$el.append(tmpl(this.model.toJSON()));
 			return this;
 		}		
 	});
+	
+	
+	AddView = Backbone.View.extend({		
+		
+		el: $('#dataView'),
+		template: $('#addcontactTemplate').html(),
+		
+		initialize: function(){
+			this.render();
+		},
+		
+		render: function(){
+			
+			var tmpl1 = _.template(this.template);
+			this.$el.html(tmpl1);
+			return this;
+		}
+		
+	});
+	
 	
 	 DirectoryView = Backbone.View.extend({
 		el: $('#dataView'),
@@ -34,6 +54,10 @@
 			this.render();
 		},
 		
+		events: {
+			"click #add": "displayAddContact" 
+		},
+		
 		render: function() {
 			var that = this;
 			_.each(this.collection.models, function(item){
@@ -42,6 +66,13 @@
 				
 			}, this	);
 		},
+		
+		displayAddContact: function(){
+			
+			var display = new AddView();
+			
+			this.$el.html(display.render().el);
+		},	
 		
 		renderContact: function(item) {
 			var contactView = new ContactView({

@@ -7,17 +7,29 @@
 	</head>
 	<body>
 	
-	<nav>
-		<ul>
-			<li><a href="">List Contacts</a></li>
-			<li><a href="">Add Contact</a></li>
-		</ul>	
-	</nav>		
+	<!--<section id="addForm">
+		<form id="addContact" action="#">
+		    <label for="photo">photo:</label><input id="photo" type="file" />
+		    <label for="type">Type:</label><input id="type" />
+		    <label for="name">Name:</label><input id="name" />
+		    <label for="address">Address:</label><input id="address" />
+		    <label for="tel">Tel:</label><input id="tel" />
+		    <label for="email">Email:</label><input id="email" />
+		    <button id="add">Add</button>
+		</form>
+	</section>-->		
 		
-	<section id="dataView"></section>		
+	<section id="dataView">
+		<nav>
+			<ul>
+				<li id="add">Add Contact</li>
+			</ul>	
+		</nav>
+	</section>		
 	
 	
 	<script id="contactTemplate" type="text/template">
+		
 	    <img src="<%= photo %>" alt="<%= name %>" />
 	    <h1><%= name %><span><%= type %></span></h1>
 	    <div><%= address %></div>
@@ -26,6 +38,7 @@
 	        <dt>Email:</dt><dd><a href="mailto:<%= email %>"><%= email %></a></dd>
 	    </dl>
 	</script>
+	
 	
 	<script src="../libs/jquery.js"></script>
 	<script src="../libs/underscore.js"></script>

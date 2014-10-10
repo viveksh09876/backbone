@@ -5,4 +5,4 @@ article {
     padding: 3px;
 }
 
-nav ul li{ display: inline; }
+nav ul li{ display: inline-block; cursor:pointer; background: #ccc; padding: 5px; margin:5px; }
